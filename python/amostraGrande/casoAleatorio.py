@@ -16,17 +16,12 @@ def heapify(arr, n, i):
 
 def heap_sort(arr):
     n = len(arr)
-    # construir o heap (max-heap)
     for i in range(n // 2 - 1, -1, -1):
         heapify(arr, n, i)
-    # extrair elementos um a um
     for i in range(n - 1, 0, -1):
         arr[i], arr[0] = arr[0], arr[i]
         heapify(arr, i, 0)
 
-# -------------------------------
-# Caso 1: Aleatório
-# -------------------------------
 arr_random = list(range(1, 500001))
 random.shuffle(arr_random)
 

@@ -21,7 +21,7 @@ def heap_sort(arr):
         arr[i], arr[0] = arr[0], arr[i]
         heapify(arr, i, 0)
 
-arr = list(range(500000, 0, -1))
+arr = list(range(10000, 0, -1))
 
 print("Heap Sort - Pior caso (ordenado decrescente, 500.000 elementos)")
 inicio = time.time()
