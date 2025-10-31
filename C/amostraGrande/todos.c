@@ -106,7 +106,7 @@ int main() {
         FILE *arquivo_saida;
 
 
-    arquivo_saida = fopen("resultado.txt", "w");
+    arquivo_saida = fopen("resultado.txt", "a");
 
     if (arquivo_saida == NULL) {
         printf("Erro ao abrir o arquivo resultado.txt!\n");
@@ -114,7 +114,7 @@ int main() {
         return 1; 
     }
 
-    fprintf(arquivo_saida, "%.4f,%.4f,%.4f", 
+    fprintf(arquivo_saida, "%.4f,%.4f,%.4f\n", 
             tempoAleatorio, 
             tempoMelhor, 
             tempoPior);

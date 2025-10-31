@@ -63,7 +63,7 @@ print(f"Caso Aleatorio : {tempo_aleatorio:.4f} s")
 print(f"Melhor Caso    : {tempo_melhor:.4f} s")
 print(f"Pior Caso      : {tempo_pior:.4f} s")
 
-resultado_str = f"{tempo_aleatorio:.4f},{tempo_melhor:.4f},{tempo_pior:.4f}"
+resultado_str = f"{tempo_aleatorio:.4f},{tempo_melhor:.4f},{tempo_pior:.4f}\n"
 
 nome_arquivo = "resultado.txt"
 
@@ -71,7 +71,7 @@ script_dir = os.path.dirname(os.path.abspath(__file__))
 
 output_file_path = os.path.join(script_dir, nome_arquivo)
 try:
-    with open(output_file_path, "w", encoding="utf-8") as f:
+    with open(output_file_path, "a", encoding="utf-8") as f:
         f.write(resultado_str)
     print(f"\nResultados salvos com sucesso em: {output_file_path}")
 except IOError as e:
