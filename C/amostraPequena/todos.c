@@ -104,6 +104,25 @@ int main() {
     printf("Melhor Caso    : %.4f s\n", tempoMelhor);
     printf("Pior Caso      : %.4f s\n", tempoPior);
 
+    FILE *arquivo_saida;
+
+
+    arquivo_saida = fopen("resultado.txt", "w");
+
+    if (arquivo_saida == NULL) {
+        printf("Erro ao abrir o arquivo resultado.txt!\n");
+        free(arr);
+        return 1; 
+    }
+
+    fprintf(arquivo_saida, "%.4f,%.4f,%.4f", 
+            tempoAleatorio, 
+            tempoMelhor, 
+            tempoPior);
+
+    fclose(arquivo_saida);
+
+    printf("\nResultados salvos com sucesso em: resultado.txt\n");
     free(arr);
     return 0;
 }
