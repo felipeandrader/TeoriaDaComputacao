@@ -35,6 +35,6 @@ O Heap Sort é um algoritmo de ordenação baseado em estrutura de dados heap, g
 
 📁 Organização do Repositório
 
-* `heapsort.c` → implementação do Heap Sort em C
-* `heapsort.py` → implementação do Heap Sort em Python
+* Pasta C → implementação dos algorítmos Heap Sort em C
+* Pasta python → implementação dos algorítmos Heap Sort em Python
 * `README.md` → este arquivo com as informações do projeto
